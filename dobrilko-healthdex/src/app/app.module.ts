@@ -15,8 +15,6 @@ import {SearchViewModule} from './search-view/search-view.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    SearchViewModule,
-    PokemonDetailsModule,
     SharedModule
   ],
   providers: [],
