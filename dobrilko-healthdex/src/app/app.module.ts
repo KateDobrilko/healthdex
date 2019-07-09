@@ -14,8 +14,8 @@ import {SearchViewModule} from './search-view/search-view.module';
   ],
   imports: [
     BrowserModule,
+    SharedModule,
     AppRoutingModule,
-    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
