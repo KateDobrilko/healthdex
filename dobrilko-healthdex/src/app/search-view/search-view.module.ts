@@ -3,6 +3,7 @@ import {NgModule} from '@angular/core';
 import {SearchViewComponent} from './search-view.component';
 import {BaseStatsComponent} from './base-stats/base-stats.component';
 import {PokedexDataComponent} from './pokedex-data/pokedex-data.component';
+import {SearchViewService} from "./search-view.service";
 
 const searchViewRoutes: Routes = [
   {
@@ -24,6 +25,7 @@ const searchViewRoutes: Routes = [
   exports: [
   ],
   providers: [
+    SearchViewService
   ]
 })
 export class SearchViewModule {
