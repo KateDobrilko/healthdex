@@ -1,6 +1,7 @@
 <div class="page-wrapper" *ngIf="pokemonBasicInfo">
   <app-navbar></app-navbar>
   <div class="pokemon-info__wrapper">
+    <h1 class="pokemon-name">{{pokemonBasicInfo.name}}</h1>
     <div class="evolution-chart__container">
       <h2 class="block-title">Evolution information</h2>
       <app-evolution-chart [pokemonId]="pokemonId"></app-evolution-chart>
