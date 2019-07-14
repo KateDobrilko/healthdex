@@ -1,4 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {PokemonBasicInfoService} from '../../shared/service/pokemon-basic-info.service';
+
 
 @Component({
   selector: 'app-search-list',
@@ -8,9 +10,12 @@ import {Component, Input, OnInit} from '@angular/core';
 export class SearchListComponent implements OnInit {
   @Input() pokemonSearchList: PokemonBasicInfo[];
 
-  constructor() { }
+
+  constructor(private pokemonBasicInfoService: PokemonBasicInfoService) {
+  }
 
   ngOnInit() {
+
   }
 
 }

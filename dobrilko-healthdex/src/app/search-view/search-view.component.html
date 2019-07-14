@@ -2,8 +2,9 @@
 <div class="search-view__wrapper">
   <div class="type-filter__wrapper">
     <label for="type-filter" class="input-label">Type:</label>
-    <select id="type-filter" class="type-filter">
-      <option class="type-filter__opt" *ngFor="let type of pokemonTypes">
+    <select (change)="onChange($event.target['value'])" id="type-filter" class="type-filter" >
+      <option [value]="''" class="type-filter__opt" default>- All -</option>
+      <option [value]="type.name" class="type-filter__opt" *ngFor="let type of pokemonTypes">
         {{type.name}}
       </option>
     </select>

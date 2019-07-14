@@ -2,9 +2,9 @@
   <ul class="search-list">
     <li class="search-list__item" *ngFor="let pokemonInfo of pokemonSearchList">
       <h1 class="pokemon-name"></h1>
-      <img src="" class="pokemon-avatar">
+      <img src="{{pokemonInfo.sprites.front_default}}" class="pokemon-avatar">
       <div class="pokedex-data__wrapper">
-        <h2 class="block-title">Pokedex data</h2>
+        <h2 class="block-title">Pokédex data</h2>
         <app-pokedex-data [pokemonInfo]="pokemonInfo"></app-pokedex-data>
       </div>
       <div class="pokedex-data__wrapper">

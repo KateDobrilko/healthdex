@@ -8,7 +8,7 @@ import {PokemonBasicInfoService} from '../../../shared/service/pokemon-basic-inf
   styleUrls: ['./evolution-chart.component.scss']
 })
 export class EvolutionChartComponent implements OnInit {
-  @Input() pokemonId: String;
+  @Input() pokemonId: string;
   evolutionChainData: EvolutionChain;
 
   constructor(private  evolutionChartService: EvolutionChartService,

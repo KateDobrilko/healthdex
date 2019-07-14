@@ -1,11 +1,12 @@
 .navbar-wrapper {
-  height: 40px;
+  height: 60px;
   padding: 10px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
   width: 100%;
   background: white;
+  box-sizing: border-box;
   position: relative;
   z-index: 10;
   box-shadow: 0 2px 5px 0 rgba(110, 111, 115, 0.5);

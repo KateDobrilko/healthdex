@@ -1,9 +1,9 @@
 interface Ability {
   is_hidden: Boolean;
-  slot: String;
+  slot: string;
   ability: {
-    name: String,
-    url: String;
+    name: string,
+    url: string;
   };
 }
 
@@ -11,44 +11,54 @@ interface PokemonStatShort {
   base_stat: Number;
   effort: Number;
   stat: {
-    name: String;
-    url: String;
+    name: string;
+    url: string;
   };
 }
 
 interface PokemonMove {
   move: {
-    name: String;
-    url: String;
+    name: string;
+    url: string;
   };
 }
 
 interface PokemonType {
-  slot: String;
+  slot: string;
   type: {
-    name: String;
-    url: String
+    name: string;
+    url: string
   };
 }
 
 interface PokemonBasicInfo {
-  id: String;
-  name: String;
+  id: string;
+  name: string;
   base_experience: Number;
   height: Number;
   weight: Number;
   abilities: Array<Ability>;
   sprites: {
-    back_default: String;
-    front_default: String;
+    back_default: string;
+    front_default: string;
   };
   stats: Array<PokemonStatShort>;
   moves: Array<PokemonMove>;
   types: Array<PokemonType>;
 }
 
+interface PokemonBasicInfoWrapper {
+  count: number;
+  next: string;
+  previous: string;
+  results: Array<{
+    name: string;
+    url: string;
+  }>;
+}
+
 interface PokemonSpeciesInfo {
-  id: String;
+  id: string;
   evolution_chain: {
     url: string
   };

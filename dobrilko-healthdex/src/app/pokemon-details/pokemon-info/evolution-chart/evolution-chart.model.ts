@@ -2,12 +2,12 @@ interface EvolutionChainItem {
   evolves_to: Array<EvolutionChainItem>;
   is_baby: Boolean;
   species: {
-    name: String;
-    url: String;
+    name: string;
+    url: string;
   };
 }
 
 interface EvolutionChain {
   chain: EvolutionChainItem;
-  id: String;
+  id: string;
 }

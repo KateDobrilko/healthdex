@@ -14,7 +14,8 @@ export class EvolutionStepComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.pokemonBasicInfoService.fetchPokemonBasicInfoByName(this.evolutionChainItem.species.name)
+    this.pokemonBasicInfoService
+      .fetchPokemonBasicInfoByName(this.evolutionChainItem.species.name)
       .subscribe(pokemonBasicInfo => {
         this.pokemonBasicInfo = pokemonBasicInfo;
       });
