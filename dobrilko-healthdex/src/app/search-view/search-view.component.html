@@ -1,3 +1,14 @@
-<p>
-  search-view works!
-</p>
+<app-navbar></app-navbar>
+<div class="search-view__wrapper">
+  <div class="type-filter__wrapper">
+    <label for="type-filter" class="input-label">Type:</label>
+    <select id="type-filter" class="type-filter">
+      <option class="type-filter__opt" *ngFor="let type of pokemonTypes">
+        {{type.name}}
+      </option>
+    </select>
+  </div>
+  <div class="search-list__wrapper">
+    <app-search-list [pokemonSearchList]="pokemonList"></app-search-list>
+  </div>
+</div>

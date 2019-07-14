@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-search-view',
@@ -6,8 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./search-view.component.scss']
 })
 export class SearchViewComponent implements OnInit {
+  pokemonTypes: {
+    name: String
+  };
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
   }

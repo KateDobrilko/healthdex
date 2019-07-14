@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-search-list',
@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./search-list.component.scss']
 })
 export class SearchListComponent implements OnInit {
-  pokemonSearchList: PokemonBasicInfo[];
+  @Input() pokemonSearchList: PokemonBasicInfo[];
 
   constructor() { }
 

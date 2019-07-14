@@ -10,6 +10,7 @@ import {AppNavbarComponent} from './component/navbar/navbar.component';
   entryComponents: [
   ],
   exports: [
+    AppNavbarComponent
   ],
   providers: [
   ]

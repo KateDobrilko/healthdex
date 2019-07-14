@@ -7,6 +7,8 @@ import {SearchViewService} from "./search-view.service";
 import { SearchListComponent } from './search-list/search-list.component';
 import {BrowserModule} from "@angular/platform-browser";
 import {CommonModule} from "@angular/common";
+import {AppNavbarComponent} from "../shared/component/navbar/navbar.component";
+import {SharedModule} from "../shared/shared.module";
 
 const searchViewRoutes: Routes = [
   {
@@ -17,7 +19,8 @@ const searchViewRoutes: Routes = [
 @NgModule({
   imports: [
     RouterModule.forChild(searchViewRoutes),
-    CommonModule
+    CommonModule,
+    SharedModule
   ],
   declarations: [
     SearchViewComponent,
@@ -26,6 +29,7 @@ const searchViewRoutes: Routes = [
     SearchListComponent
   ],
   entryComponents: [
+    AppNavbarComponent
   ],
   exports: [
   ],
