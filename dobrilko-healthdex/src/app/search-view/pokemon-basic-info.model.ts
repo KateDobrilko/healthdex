@@ -1,4 +1,4 @@
-export class Ability {
+interface Ability {
   is_hidden: Boolean;
   slot: String;
   ability: {
@@ -7,7 +7,7 @@ export class Ability {
   };
 }
 
-export class PokemonStatShort {
+interface PokemonStatShort {
   base_stat: Number;
   effort: Number;
   stat: {
@@ -16,7 +16,7 @@ export class PokemonStatShort {
   };
 }
 
-export class PokemonBasicInfo {
+interface PokemonBasicInfo {
   id: String;
   name: String;
   base_experience: Number;

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-base-stats',
@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./base-stats.component.scss']
 })
 export class BaseStatsComponent implements OnInit {
+  @Input() pokemonStats: PokemonStatShort[];
 
   constructor() { }
 

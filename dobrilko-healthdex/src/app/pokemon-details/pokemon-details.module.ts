@@ -2,6 +2,9 @@ import {RouterModule, Routes} from '@angular/router';
 import {NgModule} from '@angular/core';
 import {PokemonDetailsLayoutComponent} from './layout/layout.component';
 import {PokemonInfoComponent} from './pokemon-info/pokemon-info.component';
+import { EvolutionChartComponent } from './pokemon-info/evolution-chart/evolution-chart.component';
+import { EvolutionStepComponent } from './pokemon-info/evolution-chart/evolution-step/evolution-step.component';
+import { MovesListComponent } from './pokemon-info/moves-list/moves-list.component';
 
 const pokemonDetailsRoutes: Routes = [
   {
@@ -19,7 +22,10 @@ const pokemonDetailsRoutes: Routes = [
   ],
   declarations: [
     PokemonInfoComponent,
-    PokemonDetailsLayoutComponent
+    PokemonDetailsLayoutComponent,
+    EvolutionChartComponent,
+    EvolutionStepComponent,
+    MovesListComponent
   ],
   entryComponents: [],
   exports: [],

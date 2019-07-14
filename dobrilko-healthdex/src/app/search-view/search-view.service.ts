@@ -1,11 +1,11 @@
 import {Injectable} from '@angular/core';
 import {Subject} from 'rxjs';
-import {PokemonBasicInfo} from './pokemon-basic-info.model';
 import {HttpClient, HttpParams} from '@angular/common/http';
 import {map, tap} from 'rxjs/operators';
 
 @Injectable()
 export class SearchViewService {
+  private BASE_URL: String = 'https://pokeapi.co/api/v2/';
   pokemonBasicInfoList: PokemonBasicInfo[];
   pokemonListChanged = new Subject<PokemonBasicInfo[]>();
 
@@ -35,7 +35,7 @@ export class SearchViewService {
     }
     return this.http
       .get<PokemonBasicInfo[]>(
-        'https://pokeapi.co/api/v2/pokemon',
+        `${this.BASE_URL}pokemon`,
         {
           params
         }
@@ -44,6 +44,19 @@ export class SearchViewService {
         }),
         tap(pokemonBasicInfoList => {
           this.setPokemonBasicInfoList(pokemonBasicInfoList);
+        })
+      );
+  }
+
+  fetchPokemonByName(name: string) {
+    return this.http
+      .get<PokemonBasicInfo>(
+        `${this.BASE_URL}pokemon/${name}`
+      ).pipe(map(pokemonBasicInfo => {
+          return pokemonBasicInfo;
+        }),
+        tap(pokemonBasicInfo => {
+          this.setPokemonBasicInfoList([pokemonBasicInfo]);
         })
       );
   }
