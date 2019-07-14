@@ -20,6 +20,9 @@ export class SearchViewComponent implements OnInit {
   onChange(value) {
     this.searchListService.selectedType = value;
   }
+  onScroll() {
+    this.searchListService.fetchPokemonList();
+  }
 
   ngOnInit() {
     this.searchListService.paginationOffset = 0;

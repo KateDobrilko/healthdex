@@ -10,6 +10,7 @@ import {SharedModule} from '../shared/shared.module';
 import {HttpClientModule} from '@angular/common/http';
 import {SearchListService} from './search-list.service';
 import {FormsModule} from '@angular/forms';
+import {InfiniteScrollModule} from 'ngx-infinite-scroll';
 
 const searchViewRoutes: Routes = [
   {
@@ -23,7 +24,8 @@ const searchViewRoutes: Routes = [
     CommonModule,
     SharedModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    InfiniteScrollModule
   ],
   declarations: [
     SearchViewComponent,

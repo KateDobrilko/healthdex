@@ -11,7 +11,12 @@
       }
 
       .pokemon-name {
-
+        text-transform: capitalize;
+        text-decoration: underline;
+        color: #2064bc;
+        &:hover {
+          cursor: pointer;
+        }
       }
 
       .pokedex-data__wrapper {

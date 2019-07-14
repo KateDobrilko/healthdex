@@ -1,5 +1,10 @@
 <app-navbar></app-navbar>
-<div class="search-view__wrapper">
+<div class="search-view__wrapper"
+     infiniteScroll
+     [infiniteScrollDistance]="2"
+     [infiniteScrollThrottle]="50"
+     (scrolled)="onScroll()"
+     [scrollWindow]="false">
   <div class="type-filter__wrapper">
     <label for="type-filter" class="input-label">Type:</label>
     <select (change)="onChange($event.target['value'])" id="type-filter" class="type-filter" >

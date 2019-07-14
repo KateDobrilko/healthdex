@@ -1,6 +1,8 @@
 .search-view__wrapper {
-  margin: 30px 10%;
+  padding: 30px 10%;
   display: flex;
+  height: calc(100% - 120px);
+  overflow: auto;
   flex-flow: column;
 
   .type-filter__wrapper {

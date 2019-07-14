@@ -6,7 +6,7 @@ import {PokemonBasicInfoService} from '../shared/service/pokemon-basic-info.serv
 export class SearchListService {
   private _paginationOffset: number = 0;
   private PAGE_SIZE: number = 5;
-  private _pokemonList: PokemonBasicInfo[];
+  private _pokemonList: PokemonBasicInfo[] = [];
   private _selectedType: string;
   pokemonListChanged = new Subject<PokemonBasicInfo[]>();
 
@@ -16,6 +16,7 @@ export class SearchListService {
   set selectedType(selectedType) {
     this._selectedType = selectedType;
     this.paginationOffset = 0;
+    this.pokemonList = [];
     this.fetchPokemonList();
   }
 
@@ -47,7 +48,7 @@ export class SearchListService {
             pokemonBasicInfoObservables.push(this.pokemonService.fetchPokemonBasicInfoByName(pokemonMetaDataItem.pokemon.name));
           });
           forkJoin(pokemonBasicInfoObservables).subscribe((results) => {
-            this.pokemonList = (results as any) as PokemonBasicInfo[];
+            this.pokemonList = this.pokemonList.concat((results as any) as PokemonBasicInfo[]);
             this._paginationOffset += this.PAGE_SIZE;
           });
         }
@@ -61,7 +62,7 @@ export class SearchListService {
               pokemonBasicInfoObservables.push(this.pokemonService.fetchPokemonBasicInfoByName(pokemonMetaDataItem.name));
             });
             forkJoin(pokemonBasicInfoObservables).subscribe((results) => {
-              this.pokemonList = (results as any) as PokemonBasicInfo[];
+              this.pokemonList = this.pokemonList.concat((results as any) as PokemonBasicInfo[]);
               this._paginationOffset += this.PAGE_SIZE;
             });
           }
