@@ -1,0 +1,10 @@
+p {
+  padding: 10px;
+  display: block;
+}
+
+@media (min-width: 750px) {
+  p {
+    padding: 20px 10%;
+  }
+}

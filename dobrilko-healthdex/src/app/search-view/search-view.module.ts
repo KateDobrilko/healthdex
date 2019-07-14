@@ -11,6 +11,7 @@ import {HttpClientModule} from '@angular/common/http';
 import {SearchListService} from './search-list.service';
 import {FormsModule} from '@angular/forms';
 import {InfiniteScrollModule} from 'ngx-infinite-scroll';
+import {BaseStatsService} from "./search-list/base-stats/base-stats.service";
 
 const searchViewRoutes: Routes = [
   {
@@ -39,7 +40,8 @@ const searchViewRoutes: Routes = [
   exports: [
   ],
   providers: [
-    SearchListService
+    SearchListService,
+    BaseStatsService
   ]
 })
 export class SearchViewModule {

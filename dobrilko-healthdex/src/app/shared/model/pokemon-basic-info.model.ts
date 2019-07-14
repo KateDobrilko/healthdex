@@ -8,8 +8,9 @@ interface Ability {
 }
 
 interface PokemonStatShort {
-  base_stat: Number;
+  base_stat: number;
   effort: Number;
+  width?: any;
   stat: {
     name: string;
     url: string;

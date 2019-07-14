@@ -72,4 +72,5 @@ export class PokemonBasicInfoService {
         return pokemonBasicInfo.pokemon;
       }));
   }
+
 }
