@@ -47,17 +47,4 @@ export class SearchViewService {
         })
       );
   }
-
-  fetchPokemonByName(name: string) {
-    return this.http
-      .get<PokemonBasicInfo>(
-        `${this.BASE_URL}pokemon/${name}`
-      ).pipe(map(pokemonBasicInfo => {
-          return pokemonBasicInfo;
-        }),
-        tap(pokemonBasicInfo => {
-          this.setPokemonBasicInfoList([pokemonBasicInfo]);
-        })
-      );
-  }
 }

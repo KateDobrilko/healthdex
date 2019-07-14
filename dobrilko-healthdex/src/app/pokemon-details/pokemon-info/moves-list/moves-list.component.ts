@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-moves-list',
@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./moves-list.component.scss']
 })
 export class MovesListComponent implements OnInit {
+  @Input() metaMoves: PokemonMove[];
 
   constructor() { }
 

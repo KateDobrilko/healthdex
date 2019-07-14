@@ -1,3 +1,20 @@
-<p>
-  evolution-step works!
-</p>
+<div class="evolution-step__wrapper" *ngIf="pokemonBasicInfo">
+  <div class="step-description">
+    <img src="{{pokemonBasicInfo.sprites.front_default}}"/>
+    <div class="text-info__wrapper">
+      <span class="evolution-step__number">
+        #{{pokemonBasicInfo.id}}
+      </span>
+      <span class="evolution-step__name">
+        {{pokemonBasicInfo.name}}
+      </span>
+      <span class="evolution-step__type">
+        <span *ngFor="let type of pokemonBasicInfo.types" [ngClass]="type.type.name">{{type.type.name}}</span>
+      </span>
+    </div>
+  </div>
+  <div class="evolution-step__container" *ngFor="let evolutionChainNext of evolutionChainItem.evolves_to">
+    <div class="evolution-arrow"></div>
+    <app-evolution-step [evolutionChainItem]="evolutionChainNext"></app-evolution-step>
+  </div>
+</div>

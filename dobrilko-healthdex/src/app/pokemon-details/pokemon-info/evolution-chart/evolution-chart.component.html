@@ -1,3 +1,4 @@
-<p>
-  evolution-chart works!
-</p>
+<div class="evolution-chart__wrapper" *ngIf="evolutionChainData">
+  <app-evolution-step [evolutionChainItem]="evolutionChainData.chain">
+  </app-evolution-step>
+</div>

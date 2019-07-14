@@ -23,6 +23,14 @@ interface PokemonMove {
   };
 }
 
+interface PokemonType {
+  slot: String;
+  type: {
+    name: String;
+    url: String
+  };
+}
+
 interface PokemonBasicInfo {
   id: String;
   name: String;
@@ -36,5 +44,13 @@ interface PokemonBasicInfo {
   };
   stats: Array<PokemonStatShort>;
   moves: Array<PokemonMove>;
+  types: Array<PokemonType>;
+}
+
+interface PokemonSpeciesInfo {
+  id: String;
+  evolution_chain: {
+    url: string
+  };
 }
 

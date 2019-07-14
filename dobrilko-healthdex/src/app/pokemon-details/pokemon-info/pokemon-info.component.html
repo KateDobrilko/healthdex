@@ -1,10 +1,13 @@
-<div class="pokemon-info__wrapper" *ngIf="pokemonBasicInfo">
-  <div class="evolution-chart__container">
-    <h2 class="block-title">Evolution information</h2>
-    <app-evolution-chart></app-evolution-chart>
-  </div>
-  <div class="moves-list__container">
-    <h2 class="block-title">Moves list</h2>
-    <app-moves-list></app-moves-list>
+<div class="page-wrapper" *ngIf="pokemonBasicInfo">
+  <app-navbar></app-navbar>
+  <div class="pokemon-info__wrapper">
+    <div class="evolution-chart__container">
+      <h2 class="block-title">Evolution information</h2>
+      <app-evolution-chart [pokemonId]="pokemonId"></app-evolution-chart>
+    </div>
+    <div class="moves-list__container">
+      <h2 class="block-title">Moves list</h2>
+      <app-moves-list [metaMoves]="pokemonBasicInfo.moves"></app-moves-list>
+    </div>
   </div>
 </div>

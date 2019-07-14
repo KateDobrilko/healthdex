@@ -7,6 +7,7 @@ import { EvolutionStepComponent } from './pokemon-info/evolution-chart/evolution
 import { MovesListComponent } from './pokemon-info/moves-list/moves-list.component';
 import {SharedModule} from '../shared/shared.module';
 import {CommonModule} from '@angular/common';
+import {EvolutionChartService} from "./pokemon-info/evolution-chart/evolution-chart.service";
 
 const pokemonDetailsRoutes: Routes = [
   {
@@ -34,7 +35,9 @@ const pokemonDetailsRoutes: Routes = [
   entryComponents: [
   ],
   exports: [],
-  providers: []
+  providers: [
+    EvolutionChartService
+  ]
 })
 export class PokemonDetailsModule {
 }
