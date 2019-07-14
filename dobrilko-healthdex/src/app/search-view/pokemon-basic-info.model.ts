@@ -16,6 +16,13 @@ interface PokemonStatShort {
   };
 }
 
+interface PokemonMove {
+  move: {
+    name: String;
+    url: String;
+  };
+}
+
 interface PokemonBasicInfo {
   id: String;
   name: String;
@@ -28,5 +35,6 @@ interface PokemonBasicInfo {
     front_default: String;
   };
   stats: Array<PokemonStatShort>;
+  moves: Array<PokemonMove>;
 }
 

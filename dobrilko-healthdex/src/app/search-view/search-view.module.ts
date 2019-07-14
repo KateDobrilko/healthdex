@@ -3,12 +3,12 @@ import {NgModule} from '@angular/core';
 import {SearchViewComponent} from './search-view.component';
 import {BaseStatsComponent} from './search-list/base-stats/base-stats.component';
 import {PokedexDataComponent} from './search-list/pokedex-data/pokedex-data.component';
-import {SearchViewService} from "./search-view.service";
+import {SearchViewService} from './search-view.service';
 import { SearchListComponent } from './search-list/search-list.component';
-import {BrowserModule} from "@angular/platform-browser";
-import {CommonModule} from "@angular/common";
-import {AppNavbarComponent} from "../shared/component/navbar/navbar.component";
-import {SharedModule} from "../shared/shared.module";
+import {CommonModule} from '@angular/common';
+import {AppNavbarComponent} from '../shared/component/navbar/navbar.component';
+import {SharedModule} from '../shared/shared.module';
+import {HttpClientModule} from '@angular/common/http';
 
 const searchViewRoutes: Routes = [
   {
@@ -20,7 +20,8 @@ const searchViewRoutes: Routes = [
   imports: [
     RouterModule.forChild(searchViewRoutes),
     CommonModule,
-    SharedModule
+    SharedModule,
+    HttpClientModule
   ],
   declarations: [
     SearchViewComponent,

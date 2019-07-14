@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {ActivatedRoute, Router} from '@angular/router';
+import {PokemonBasicInfoService} from '../../shared/service/pokemon-basic-info.service';
 
 @Component({
   selector: 'app-pokemon-info',
@@ -6,10 +8,24 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./pokemon-info.component.scss']
 })
 export class PokemonInfoComponent implements OnInit {
+  private pokemonId: String;
+  private pokemonBasicInfo: PokemonBasicInfo;
 
-  constructor() { }
+  constructor(private route: ActivatedRoute,
+              private router: Router,
+              private pokemonBasicInfoService: PokemonBasicInfoService) {
+  }
 
   ngOnInit() {
+    this.route.params.subscribe(params => {
+      this.pokemonId = params['pokemonId'];
+      this.pokemonBasicInfoService.fetchPokemonBasicInfo(this.pokemonId).subscribe((pokemonBasicInfo) => {
+          this.pokemonBasicInfo = pokemonBasicInfo;
+        }, () => {
+          this.router.navigate(['/404']);
+        }
+      );
+    });
   }
 
 }

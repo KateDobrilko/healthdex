@@ -5,6 +5,8 @@ import {PokemonInfoComponent} from './pokemon-info/pokemon-info.component';
 import { EvolutionChartComponent } from './pokemon-info/evolution-chart/evolution-chart.component';
 import { EvolutionStepComponent } from './pokemon-info/evolution-chart/evolution-step/evolution-step.component';
 import { MovesListComponent } from './pokemon-info/moves-list/moves-list.component';
+import {SharedModule} from '../shared/shared.module';
+import {CommonModule} from '@angular/common';
 
 const pokemonDetailsRoutes: Routes = [
   {
@@ -18,7 +20,9 @@ const pokemonDetailsRoutes: Routes = [
 
 @NgModule({
   imports: [
+    CommonModule,
     RouterModule.forChild(pokemonDetailsRoutes),
+    SharedModule
   ],
   declarations: [
     PokemonInfoComponent,
@@ -27,7 +31,8 @@ const pokemonDetailsRoutes: Routes = [
     EvolutionStepComponent,
     MovesListComponent
   ],
-  entryComponents: [],
+  entryComponents: [
+  ],
   exports: [],
   providers: []
 })
