@@ -1,11 +1,11 @@
 .base-stats__wrapper {
+  width: 100%;
   .block-title {
 
   }
 
   .base-stats__table {
-    width: 80%;
-
+   width: 100%;
     tr {
       th {
         border-top: 1px solid #eee;
@@ -47,7 +47,7 @@
 @media (min-width: 750px) {
   .base-stats__wrapper {
     .base-stats__table {
-      width: 30%;
+
     }
   }
 
