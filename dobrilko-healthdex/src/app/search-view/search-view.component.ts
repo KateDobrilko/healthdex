@@ -6,9 +6,10 @@ import {Component, OnInit} from '@angular/core';
   styleUrls: ['./search-view.component.scss']
 })
 export class SearchViewComponent implements OnInit {
-  pokemonTypes: {
+  pokemonTypes: Array<{
     name: String
-  };
+  }>;
+  pokemonList: PokemonBasicInfo[];
 
   constructor() {
   }

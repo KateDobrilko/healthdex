@@ -8,8 +8,8 @@ import {PokemonBasicInfoService} from '../../shared/service/pokemon-basic-info.s
   styleUrls: ['./pokemon-info.component.scss']
 })
 export class PokemonInfoComponent implements OnInit {
-  private pokemonId: String;
-  private pokemonBasicInfo: PokemonBasicInfo;
+  pokemonId: String;
+  pokemonBasicInfo: PokemonBasicInfo;
 
   constructor(private route: ActivatedRoute,
               private router: Router,
