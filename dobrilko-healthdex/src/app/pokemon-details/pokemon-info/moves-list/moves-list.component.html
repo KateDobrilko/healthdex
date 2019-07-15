@@ -1,27 +1,29 @@
-<h2 class="block-title">Moves list</h2>
-<div class="moves-table__container" infiniteScroll
-     [infiniteScrollDistance]="2"
-     [infiniteScrollThrottle]="50"
-     (scrolled)="onScroll()"
-     [scrollWindow]="false">
-    <table class="moves-table">
-        <thead>
-        <tr>
-            <th>Id</th>
-            <th>Name</th>
-            <th>Type</th>
-            <th>Power</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr *ngFor="let move of moves">
-            <td>{{move.id}}</td>
-            <td class="name-cell">{{move.name  | nameTransform}}</td>
-            <td class="type-cell">
-                <div class="type-cell__content" [ngClass]="move.type.name">{{move.type.name}}</div>
-            </td>
-            <td>{{move.power? move.power: '-/-'}}</td>
-        </tr>
-        </tbody>
-    </table>
+<div *ngIf="moves.length">
+    <h2 class="block-title">Moves list</h2>
+    <div class="moves-table__container" infiniteScroll
+         [infiniteScrollDistance]="2"
+         [infiniteScrollThrottle]="50"
+         (scrolled)="onScroll()"
+         [scrollWindow]="false">
+        <table class="moves-table">
+            <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Power</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let move of moves">
+                <td>{{move.id}}</td>
+                <td class="name-cell">{{move.name | nameTransform}}</td>
+                <td class="type-cell">
+                    <div class="type-cell__content" [ngClass]="move.type.name">{{move.type.name}}</div>
+                </td>
+                <td>{{move.power? move.power: '-/-'}}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
 </div>

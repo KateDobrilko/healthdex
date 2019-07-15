@@ -5,7 +5,7 @@ import {PokemonBasicInfoService} from "../../../shared/service/pokemon-basic-inf
 @Injectable()
 export class MovesListService {
     private _paginationOffset: number = 0;
-    private PAGE_SIZE: number = 15;
+    private PAGE_SIZE: number = 8;
     private _movesList: PokemonMoveExtended[] = [];
     private _movesListMeta: PokemonMove[] = [];
     movesListChanged = new Subject<PokemonMoveExtended[]>();
