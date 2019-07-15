@@ -36,8 +36,8 @@ interface PokemonBasicInfo {
   id: string;
   name: string;
   base_experience: Number;
-  height: Number;
-  weight: Number;
+  height: number;
+  weight: number;
   abilities: Array<Ability>;
   sprites: {
     back_default: string;
