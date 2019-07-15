@@ -21,11 +21,11 @@ export class BaseStatsService {
 
   getPercentStripeWidth(tableElement: ElementRef, percent: number) {
     if (percent === 100) {
-      return tableElement.nativeElement.clientWidth * 0.6;
+      return tableElement.nativeElement.clientWidth * 0.5;
     } else if (percent > 100) {
-      return tableElement.nativeElement.clientWidth * 0.65;
+      return tableElement.nativeElement.clientWidth * 0.55;
     } else {
-      return tableElement.nativeElement.clientWidth * 0.6 * percent / 100;
+      return tableElement.nativeElement.clientWidth * 0.5 * percent / 100;
     }
   }
 }

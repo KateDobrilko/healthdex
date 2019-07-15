@@ -22,7 +22,7 @@
         display: flex;
         flex-flow: column;
         justify-content: space-between;
-        width: 90%;
+        width: 100%;
         align-items: flex-start;
 
         .pokemon-avatar {
@@ -32,7 +32,7 @@
 
         .pokedex-data__wrapper {
           margin-left: 0;
-          width: 80%;
+          width: 100%;
           .block-title {
 
           }
