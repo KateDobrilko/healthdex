@@ -58,3 +58,7 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 Application is deployed via firebase-tools.
 
 Url: http://dobrilkohealthdex.firebaseapp.com
+
+## Mobile Devices
+
+Application styles are adapted to be mobile-friendly.
