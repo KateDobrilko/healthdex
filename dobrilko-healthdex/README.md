@@ -13,45 +13,45 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 - app - folder contains main module of SPA, main routing module
 
--- not-found - component for 404 page
+    - not-found - component for 404 page
 
--- pokemon-details - module, containing /pokemon-details/:id page and its contents
+    - pokemon-details - module, containing /pokemon-details/:id page and its contents
 
---- layout - component, containing router outlet for /pokemon-details module
+        - layout - component, containing router outlet for /pokemon-details module
 
---- pokemon-info - folder, containing pokemon details components
+        - pokemon-info - folder, containing pokemon details components
 
----- evolution-chart - component, responsible for displaying evolution chain of pokemon
+            - evolution-chart - component, responsible for displaying evolution chain of pokemon
 
------ evolution-step - component, responsible for displaying evolution chain item
+                - evolution-step - component, responsible for displaying evolution chain item
 
----- moves-list - component, showing moves of current pokemon (list is paginated with usage of ngx-infinite-scroll)
+            - moves-list - component, showing moves of current pokemon (list is paginated with usage of ngx-infinite-scroll)
 
------ moves-list.service.ts - service, responsible for providing moves list updates
+                - moves-list.service.ts - service, responsible for providing moves list updates
 
------ name-transform.pipe.ts - pipe to transform name of move to suitable for user form
+                - name-transform.pipe.ts - pipe to transform name of move to suitable for user form
 
--- search-view - module, containing search view with basic info about pokemons
+    - search-view - module, containing search view with basic info about pokemons
 
---- search-list - module, containing search pokemons page and its contents
+        - search-list - module, containing search pokemons page and its contents
 
----- base-stats - folder, containing component, model and service to display basic stats of pokemon. Stats, that less than 60 are red, from 60 to 90 are yellow, 90+ are green.
+            - base-stats - folder, containing component, model and service to display basic stats of pokemon. Stats, that less than 60 are red, from 60 to 90 are yellow, 90+ are green.
 
----- pokedex-data - component, containing basic pokedex data for pokemon
+            - pokedex-data - component, containing basic pokedex data for pokemon
 
--- shared - folder, containing components, models and services, which are shared between pages
+    - shared - folder, containing components, models and services, which are shared between pages
 
---- component
+        - component
 
----- navbar - navigation bar component
+            - navbar - navigation bar component
 
---- model
+        - model
 
----- pokemon-basic-info.model.ts - pokeapi models
+            - pokemon-basic-info.model.ts - pokeapi models
 
--- service
+        - service
 
----- pokemon-basic-info.service.ts - service, which fetches basic pokeapi models from api service via http
+            - pokemon-basic-info.service.ts - service, which fetches basic pokeapi models from api service via http
 
 ## Deployment
 
