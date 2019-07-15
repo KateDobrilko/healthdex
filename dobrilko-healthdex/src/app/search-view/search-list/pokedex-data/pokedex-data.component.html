@@ -1,4 +1,38 @@
-<h2 class="block-title">Pokédex data</h2>
-<p>
-  pokedex-data works!
-</p>
+<div class="base-stats__wrapper">
+  <h2 class="block-title">Pokédex data</h2>
+  <table class="base-stats__table">
+    <tr>
+      <th>National №</th>
+      <td>
+        <span>{{pokemonInfo.id}}</span>
+      </td>
+    </tr>
+    <tr>
+      <th>Type</th>
+      <td>
+        <span [ngClass]="type.type.name" *ngFor="let type of pokemonInfo.types">
+          <span>
+          {{type.type.name}}
+            </span>
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <th>Weight</th>
+      <td>
+        <span>
+          {{pokemonInfo.weight / 10}} kg
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <th>Height</th>
+      <td>
+        <span>
+          {{pokemonInfo.height / 10}} m
+        </span>
+      </td>
+    </tr>
+  </table>
+</div>
+

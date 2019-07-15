@@ -1,5 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-html, body{
+html, body {
   height: 100%;
   width: 100%;
   font-family: 'Verdana', sans-serif;
@@ -7,4 +7,45 @@ html, body{
   padding: 0;
   box-sizing: border-box;
   font-size: 16px;
+}
+
+.base-stats__wrapper {
+  width: 100%;
+
+  .base-stats__table {
+    width: 100%;
+
+    tr {
+      th {
+        border-top: 1px solid #eee;
+        color: #74797b;
+        font-weight: normal;
+
+        & + td {
+          padding-left: 10px;
+        }
+      }
+
+      td {
+        border-top: 1px solid #eee;
+        padding: 5px 0;
+        display: flex;
+
+        & > span {
+          margin-right: 10px;
+          min-width: 50px;
+        }
+
+      }
+    }
+  }
+}
+
+@media (min-width: 750px) {
+  .base-stats__wrapper {
+    .base-stats__table {
+
+    }
+  }
+
 }
