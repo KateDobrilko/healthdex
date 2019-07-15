@@ -37,7 +37,7 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
             - base-stats - folder, containing component, model and service to display basic stats of pokemon. Stats, that less than 60 are red, from 60 to 90 are yellow, 90+ are green.
 
-            - pokedex-data - component, containing basic pokedex data for pokemon
+        - pokedex-data - component, containing basic pokedex data for pokemon
 
     - shared - folder, containing components, models and services, which are shared between pages
 
