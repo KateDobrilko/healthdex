@@ -1,4 +1,5 @@
 @import "../../../../../assets/css/colors";
+@import "../../../../../assets/css/breakpoints";
 
 .evolution-step__wrapper {
   display: flex;
@@ -145,7 +146,7 @@
   }
 }
 
-@media(min-width: 750px) {
+@media(min-width: $tablet-breakpoint) {
   .evolution-step__wrapper {
     flex-flow: row;
     .step-description {

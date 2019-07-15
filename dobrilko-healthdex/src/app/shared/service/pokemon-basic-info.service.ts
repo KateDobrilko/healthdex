@@ -59,6 +59,15 @@ export class PokemonBasicInfoService {
       }));
   }
 
+  fetchMoveByName(name: string) {
+      return this.http
+          .get<PokemonMoveExtended>(
+              `${this.BASE_URL}move/${name}`
+          ).pipe(map(pokemonMove => {
+              return pokemonMove;
+          }));
+  }
+
   fetchPokemonsByType(id: string) {
     return this.http
       .get<{

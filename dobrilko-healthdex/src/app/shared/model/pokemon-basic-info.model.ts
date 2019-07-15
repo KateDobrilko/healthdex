@@ -24,6 +24,15 @@ interface PokemonMove {
   };
 }
 
+interface PokemonMoveExtended {
+    id: string;
+    name: string;
+    type: {
+      name: string;
+    },
+    power: number;
+}
+
 interface PokemonType {
   slot: string;
   type: {
